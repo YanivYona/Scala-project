@@ -1,0 +1,3 @@
+GET    /mydb                        coupon.conn.CouponController.index
+GET   /                                 controllers.HomeController.index
+

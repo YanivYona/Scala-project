@@ -1,0 +1,24 @@
+@(coupons: Array[Coupon])
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Groupon</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+      <h1 style="margin:0px auto;color:orangered;font-size:500%">My coupon site</h1>
+    </nav>
+    <div class="container text-center">
+      @for(c <- coupons){
+        <section style="width:300px;height: 350px; border:1px solid black ; margin: 20px;display: inline-block;">
+          <h2>@c.product</h2>
+          <img src="@c.image" style="display: inline-block;width:250px;height: 200px;" class="xs-4"/><br>
+          <b style="color:gray;font-size: 150%">@c.description</b>
+        </section>
+      }
+    </div>
+  </body>
+</html>
+
